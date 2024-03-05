@@ -6,17 +6,49 @@ body{
     font-family: 'Lato';
 }
 
+#titulo{
+
+    width: 100vw;
+    margin: auto;
+    padding: 2em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 2em;
+    gap: 2em;
+}
+
+#principal {
+    font-size: 2.5em;
+}
+.logo1{
+    padding: 2em;
+    width: 150px;
+    height: 100px;
+}
+
+.barra{
+    border: 2px solid #9D6AAA;
+    border-radius: 7px;
+    width: 40vw;
+    padding: 1em 1em 1em 1em;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 #ultimas-peliculas{
     width: 85vw;
     margin: auto;
     margin-top: 1.5em;
-    border:2px solid rgb(113,99,99);
-    border-radius: 15px;
+    border:2px solid #9D6AAA;
+    border-radius: 7px;
     padding: 2em;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 1em;
+    gap: 1.5em;
 }
 
 .card{
@@ -32,23 +64,38 @@ body{
     overflow: hidden;
     position: relative;
 }
-
+#principal{
+    color: #ff3838;
+    letter-spacing: 1px;
+    margin: 0px;
+    font-size: 2em;
+}
 .title{
     color: #ff3838;
     letter-spacing: 1px;
     margin: 0px;
+    font-size: 1.5em;
 }
-.rate{
-    line-height: 24px;
-    height: 70%;
+.p-card{
+    background-color: (100,43,115,1);
+    width: 73%;
+    /* border:2px solid rgb(113,99,99); */
+    border:2px solid #9D6AAA;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.2em;
+    font-family: 'Lato';
+    padding: 0.7em 0.8em 0.8em 0.8em;
+    margin: 0.5em 0.5em;
+    text-align: justify;
 }
 
 .mini-card {
     opacity: 0;
     position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #f9f9f9;
+    top: 0%;
+    left: 0%;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(100,43,115,1) 0%, rgba(4,0,4,1) 90% );
     border: 1px solid #ccc;
     padding: 10px; 
     width: 100%; 
@@ -60,3 +107,18 @@ body{
     opacity: 1;
 }
   
+.boton{
+    width: 10em;
+    height: 5ex;
+    background-color: rgba(100,43,115,1);
+    border: 2px solid rgb(113,99,99);
+    border-radius: 7px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .boton:hover{
+      background-color:#9D6AAA;
+  }
