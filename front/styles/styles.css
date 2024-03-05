@@ -1,0 +1,62 @@
+
+body{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(100,43,115,1) 0%, rgba(4,0,4,1) 90% );
+    width:100%;
+    height:100vh;
+    font-family: 'Lato';
+}
+
+#ultimas-peliculas{
+    width: 85vw;
+    margin: auto;
+    margin-top: 1.5em;
+    border:2px solid rgb(113,99,99);
+    border-radius: 15px;
+    padding: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1em;
+}
+
+.card{
+    flex: 1;
+    flex-basis: 300px;
+    flex-grow: 0;
+    height: 440px;
+    background: #fff;
+    border: 2px solid rgba(0,0,0,.5);
+    box-shadow: 5px 5px 8px rgba(255,255,255,.5);
+    cursor: pointer;
+    transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+    overflow: hidden;
+    position: relative;
+}
+
+.title{
+    color: #ff3838;
+    letter-spacing: 1px;
+    margin: 0px;
+}
+.rate{
+    line-height: 24px;
+    height: 70%;
+}
+
+.mini-card {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px; 
+    width: 100%; 
+    height: 100%;
+    transition: opacity 0.5s ease; 
+}
+
+.card:hover .mini-card {
+    opacity: 1;
+}
+  
