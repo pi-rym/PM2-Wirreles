@@ -8,40 +8,46 @@ body{
 
 #titulo{
 
-    width: 100vw;
-    margin: auto;
-    padding: 2em;
+    width: 85vw;
+    margin: auto; 
+    padding: 2em; 
     display: flex;
     flex-direction: row;
-    align-items: center;
-    padding-top: 2em;
-    gap: 2em;
+    align-items:flex-start;
+    padding-top: 1em;
+    gap: 1em;
 }
 
-#principal {
-    font-size: 2.5em;
-}
 .logo1{
     padding: 2em;
-    width: 150px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
 }
 
 .barra{
     border: 2px solid #9D6AAA;
     border-radius: 7px;
-    width: 40vw;
+    width: 55vw;
     padding: 1em 1em 1em 1em;
     margin: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    gap: 2em;
 }
 
+#conteiner-pelis{
+    width: 85vw;
+    margin: auto;
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
 #ultimas-peliculas{
     width: 85vw;
     margin: auto;
-    margin-top: 1.5em;
+    /* margin-top: 5em; */
     border:2px solid #9D6AAA;
     border-radius: 7px;
     padding: 2em;
@@ -78,8 +84,7 @@ body{
 }
 .p-card{
     background-color: (100,43,115,1);
-    width: 73%;
-    /* border:2px solid rgb(113,99,99); */
+    width: 80%;
     border:2px solid #9D6AAA;
     border-radius: 10px;
     color: #fff;
@@ -87,7 +92,7 @@ body{
     font-family: 'Lato';
     padding: 0.7em 0.8em 0.8em 0.8em;
     margin: 0.5em 0.5em;
-    text-align: justify;
+    text-align:left;
 }
 
 .mini-card {

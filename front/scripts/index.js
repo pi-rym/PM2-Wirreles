@@ -1,9 +1,15 @@
-function scrollToSection(sectionId) {
-    const section = document.getElementById(sectionId);
-    if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-    }
-}
+
+document.getElementById('btnNavigate').addEventListener('click', function() {
+    window.location.href = "./pages/info_proyecto.html";
+});
+document.getElementById('Inicio').addEventListener('click', function() {
+    window.location.href = "./index.html";
+});
+
+document.getElementById('btnNavigate1').addEventListener('click', function() {
+    window.location.href = "./pages/add_peli.html";
+});
+
 
 class Pelicula {
     constructor(year, title, director, poster, duration, genre, rate){
@@ -32,15 +38,12 @@ class Repository {
 const repository = new Repository();
 
 const addMovie = () => {
-    fetch('https://students-api.2.us-1.fl0.io/movies')
-        .then(response => response.json())
-        .then(data => {
-            data.forEach(movieData => {
-                repository.createMovie(movieData);
-            });
-            actualizarVista();
-        })
-        .catch(error => console.error('Error al obtener las películas:', error));
+    $.get('https://students-api.2.us-1.fl0.io/movies', (data)=>{
+        data.forEach((movieData) =>{
+            repository.createMovie(movieData)
+        });
+        actualizarVista();
+    })
 }
 
 function elementoHtml(Data) {
@@ -115,4 +118,3 @@ function actualizarVista(){
 }
 addMovie();
 actualizarVista();
-
