@@ -3,11 +3,15 @@ document.getElementById('btnNavigate').addEventListener('click', function() {
     window.location.href = "./pages/info_proyecto.html";
 });
 document.getElementById('Inicio').addEventListener('click', function() {
-    window.location.href = "./index.html";
+    window.location.href = "./";
 });
 
 document.getElementById('btnNavigate1').addEventListener('click', function() {
     window.location.href = "./pages/add_peli.html";
+});
+
+document.getElementById('btnNavigate3').addEventListener('click', function() {
+    window.location.href = "./add_peli.html";
 });
 
 
@@ -50,7 +54,7 @@ function elementoHtml(Data) {
     const {year, title, director, poster, duration, genre, rate} = Data;
 
     const card = document.createElement('div');
-    card.classList.add('card');
+    card.classList.add('card1');
 
     // const cardLink = document.createElement('a');
     // cardLink.href = link;
@@ -118,3 +122,6 @@ function actualizarVista(){
 }
 addMovie();
 actualizarVista();
+
+// const boton = document.getElementById("boton");
+// boton.addEventListener("click", tomarValores);
