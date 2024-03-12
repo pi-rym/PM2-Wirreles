@@ -1,5 +1,6 @@
 const {Repository} = require('./models.js')
 const {elementoHtml}= require('./elementoHtml.js')
+const axios = require('axios');
 
 const repository = new Repository();
 
@@ -18,13 +19,18 @@ function actualizarVista(){
 }
 
 const addMovie = () => {
-    $.get('https://students-api.up.railway.app/movies', (data)=>{
-        data.forEach((movieData) =>{
-            repository.createMovie(movieData)
+    axios.get('https://students-api.up.railway.app/movies')
+        .then(response => {
+            response.data.forEach(movieData => {
+                repository.createMovie(movieData);
+            });
+            actualizarVista();
+        })
+        .catch(error => {
+            console.error('Error al obtener los datos de las películas:', error);
         });
-        actualizarVista();
-    })
 }
+
 
 module.exports = {
     actualizarVista,
