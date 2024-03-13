@@ -3,6 +3,6 @@ const getMovies = require('../controllers/movieControllers')
 
 const movies = Router()
 
-movies.get('/movies', getMovies)
+movies.get('/', getMovies)
 
 module.exports = movies

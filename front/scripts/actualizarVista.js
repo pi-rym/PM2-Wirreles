@@ -19,7 +19,7 @@ function actualizarVista(){
 }
 
 const addMovie = () => {
-    axios.get('https://students-api.up.railway.app/movies')
+    axios.get('http://localhost:3000/movies')
         .then(response => {
             response.data.forEach(movieData => {
                 repository.createMovie(movieData);
