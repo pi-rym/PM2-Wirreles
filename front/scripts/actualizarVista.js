@@ -27,7 +27,7 @@ const addMovie = () => {
             actualizarVista();
         })
         .catch(error => {
-            console.error('Error al obtener los datos de las películas:', error);
+            console.log('Error al obtener los datos de las películas:', error.message);
         });
 }
 

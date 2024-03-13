@@ -1,6 +1,5 @@
 
 const {actualizarVista, addMovie} = require('./actualizarVista.js')
-const axios = require('axios');
 
 addMovie();
 actualizarVista();
