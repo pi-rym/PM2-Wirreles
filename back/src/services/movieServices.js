@@ -1,4 +1,3 @@
-// movieServices.js
 class Movies {
     constructor(movieData) {
         if (!movieData.title || !movieData.director || !movieData.poster) {
