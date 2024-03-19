@@ -1,8 +1,8 @@
-const movies = require('../services/movieServices')
+const {getMovies,postMovies} = require('../services/movieServices')
 
 const getMovie = async (req, res)=>{
     try {
-        const movie = await movies();
+        const movie = await getMovies();
         res.status(200).json(movie);
     } catch (error) {
         console.error(error);
@@ -12,4 +12,18 @@ const getMovie = async (req, res)=>{
     }
 }
 
-module.exports =  getMovie;
+const postMovie = async (req, res)=>{
+    try {
+        await postMovies(req.body)
+        res.status(200).json(
+            {message: "Pelicula creada con exito"}
+        )
+    } catch (error) {
+        res.status(400).json({error:error.message})
+    }
+}
+
+module.exports = {
+    getMovie,
+    postMovie
+}

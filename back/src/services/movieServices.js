@@ -6,6 +6,19 @@ const getMovies = async () =>{
     return movies
 }
 
-module.exports = getMovies;
+const postMovies = async (movie) => {
+    try {
+        const newMovie = await Movie.create(movie)
+        return newMovie
+    } catch (error) {
+        throw new Error(error.message)
+    }
+    
+}
+
+module.exports = {
+    getMovies,
+    postMovies
+};
 
 
