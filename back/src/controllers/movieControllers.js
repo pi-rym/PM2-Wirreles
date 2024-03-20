@@ -14,12 +14,14 @@ const getMovie = async (req, res)=>{
 
 const postMovie = async (req, res)=>{
     try {
-        await postMovies(req.body)
+        const {title, year, poster, director, duration, rate, genre} = req.body
+        const newMovie = {title, year, poster, director, duration, rate, genre}
+        await postMovies(newMovie)
         res.status(200).json(
             {message: "Pelicula creada con exito"}
         )
     } catch (error) {
-        res.status(400).json({error:error.message})
+        res.status(400).json({message:"hola"})
     }
 }
 

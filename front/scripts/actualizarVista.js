@@ -31,7 +31,6 @@ const addMovie = () => {
         });
 }
 
-
 module.exports = {
     actualizarVista,
     addMovie
