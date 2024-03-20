@@ -18,7 +18,7 @@ function actualizarVista(){
     });
 }
 
-const addMovie = () => {
+const getMovies = () => {
     axios.get('http://localhost:3000/movies')
         .then(response => {
             response.data.forEach(movieData => {
@@ -33,5 +33,5 @@ const addMovie = () => {
 
 module.exports = {
     actualizarVista,
-    addMovie
+    getMovies
 }

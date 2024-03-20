@@ -17,10 +17,10 @@ document.addEventListener('DOMContentLoaded', function() {
   limpiar.addEventListener("click", clear);
 });
 
-
+let obj;
 function tomarValores (e){
     e.preventDefault()
-    let obj;
+   
     const primerGen =  document.getElementById("Action");
     const segundoGen = document.getElementById("Adventure");
     const tercerGen = document.getElementById("Fantasy");
@@ -73,42 +73,20 @@ function tomarValores (e){
         rate,
         poster
     }
-    postData(obj)
+
+
 }
 
+
 const button = document.getElementById('boton')
-// button.addEventListener("click", tomarValores)
-
-
-const postData = async (obj) => {
-
-    const url = "http://localhost:3000/movies"; 
-
-    const requestOptions = {
-        method: 'POST',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(obj), // Agrega los datos que deseas enviar
-    };
-
+button.addEventListener("click", tomarValores)
+button.addEventListener("click", async ()=>{
     try {
-        await fetch(url, requestOptions);
-        
-        // const data = await response.json();
-        // Aquí puedes manejar la respuesta exitosa (data)
-        
+        await axios.post("http://localhost:3000/movies", obj)
+        alert("Pelicula creada con exito")
+        clear()
     } catch (error) {
-        // Manejo de errores
-        console.error('Error al realizar la solicitud POST:', error);
+        throw Error(error.message)
     }
-};
-
-const form = document.getElementById("form");
-form.addEventListener("submit", (e)=>{
-    tomarValores(e)
-    alert("Pelicula creada con exito")
-    clear()
-});
+})
 

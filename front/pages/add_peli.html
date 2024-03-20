@@ -20,7 +20,9 @@
 <body>
     <header>
         <div id="titulo" class="container-lg">
+          <a href="../index.html">
             <img src="../img/logo.png" class="logo1">
+          </a>
   
             <nav class="container-sm flex-row d-flex flex-wrap barra">
               <button class="boton" id="Inicio">Inicio</button>
@@ -31,7 +33,7 @@
     </header>
     <main>
         <section id="newMovie">
-            <h1 class="fs-1 text-light text-center">Agregue una nueva pelicula</h1>
+            <h1 class="fs-1 title  text-center">Agregue una nueva pelicula</h1>
             <form id="form" class="mb-3 needs-validation m-5 text-light" novalidate>
                 <div class="mb-3">
                   <label for="year" class="form-label">Año</label>
@@ -63,7 +65,7 @@
                 </div>
                 <div class="mb-3">
                   <label for="duration" class="form-label">Duracion</label>
-                  <input name="duration" type="number" class="form-control" id="duration" placeholder="Ingrese la duracion" required>
+                  <input name="duration" type="text" class="form-control" id="duration" placeholder="Ingrese la duracion" required>
                   <div class="invalid-feedback">
                     Por favor ingrese la duracion
                   </div>
@@ -100,7 +102,7 @@
                 </div>
                 <div class="mb-3">
                   <label for="rate" class="form-label">Ratio</label>
-                  <input name="rate" type="number" class="form-control" id="rate" placeholder="Ingrese la calificacion" required>
+                  <input name="rate" type="number" step="0.01" class="form-control" id="rate" placeholder="Ingrese la calificacion" required>
                   <div class="invalid-feedback">
                     Por favor ingrese la calificacion
                   </div>
@@ -112,12 +114,12 @@
         
     </main>
     
-    <script src="../scripts/nuevojs.js">
+    <script src="../scripts/add_peli.js">
       
     </script>
 
 </body>
-<footer class="p-3 border-top" style=" background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(100,43,115,1) 0%, rgba(4,0,4,1) 90% );">
-
+<footer class="text-center text-light p-3 border-top" style=" background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(100,43,115,1) 0%, rgba(4,0,4,1) 90% );">
+  <p>&copy; 2024 Joel. Todos los derechos reservados.</p>
 </footer>
 </html>

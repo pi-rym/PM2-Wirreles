@@ -21,7 +21,7 @@ const postMovie = async (req, res)=>{
             {message: "Pelicula creada con exito"}
         )
     } catch (error) {
-        res.status(400).json({message:"hola"})
+        res.status(400).json({message:"Error al crear la pelicula"})
     }
 }
 

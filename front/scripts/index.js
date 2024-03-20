@@ -1,7 +1,7 @@
 
-const {actualizarVista, addMovie} = require('./actualizarVista.js')
+const {actualizarVista, getMovies} = require('./actualizarVista.js')
 
-addMovie();
+getMovies();
 actualizarVista();
 
 
