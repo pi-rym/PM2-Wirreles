@@ -11,7 +11,8 @@ function elementoHtml(Data) {
 
     const card1 = document.createElement('div');
     card1.classList.add('mini-card');
-
+    // const contImg = document.createElement('div');
+    // contImg.classList.add('cont-img');
     const titleElement = document.createElement('h1');
     titleElement.textContent = title;
     titleElement.classList.add('title');
@@ -50,6 +51,7 @@ function elementoHtml(Data) {
     card1.appendChild(durationElement);
 
     card.appendChild(imageElement);
+    
     card.appendChild(card1);
 
     // cardLink.appendChild(card)
